@@ -1,6 +1,8 @@
-# My Portfolio
+# Fathima Naksha Banu | Portfolio
 
-A personal portfolio built with **Next.js (App Router)**, **TypeScript**, **Tailwind CSS v4**, **Framer Motion**, and **lucide-react**. No backend: the contact form opens the visitor's email app.
+**Live site:** [my-portfolio-naksh.vercel.app](https://my-portfolio-naksh.vercel.app)
+
+Full-Stack Developer & Accounting Technician (MAAT). A personal portfolio built with **Next.js (App Router)**, **TypeScript**, **Tailwind CSS v4**, **Framer Motion**, and **lucide-react**. No backend: the contact form opens the visitor's email app.
 
 ---
 
