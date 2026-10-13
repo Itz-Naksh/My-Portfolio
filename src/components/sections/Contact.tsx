@@ -14,6 +14,8 @@ import SocialLinks from "@/components/ui/SocialLinks";
 const SERVICE_ID = process.env.NEXT_PUBLIC_EMAILJS_SERVICE_ID;
 const TEMPLATE_ID = process.env.NEXT_PUBLIC_EMAILJS_TEMPLATE_ID;
 const PUBLIC_KEY = process.env.NEXT_PUBLIC_EMAILJS_PUBLIC_KEY;
+// Placeholder values from .env.example count as "not set up"
+const EMAILJS_READY = [SERVICE_ID, TEMPLATE_ID, PUBLIC_KEY].every((v) => v && !v.startsWith("your_"));
 
 type Fields = { name: string; email: string; message: string };
 type Errors = Partial<Record<keyof Fields, string>>;
@@ -62,9 +64,15 @@ export default function Contact() {
       return;
     }
 
-    if (!SERVICE_ID || !TEMPLATE_ID || !PUBLIC_KEY) {
-      setStatus("error");
-      setFeedback(`The contact form isn't configured yet. Please email me directly at ${personal.email}.`);
+    // No EmailJS keys yet: open the visitor's email app with the message filled in
+    if (!EMAILJS_READY) {
+      const subject = `Portfolio message from ${fields.name.trim()}`;
+      const body = `${fields.message.trim()}
+
+— ${fields.name.trim()} (${fields.email.trim()})`;
+      window.location.href = `mailto:${personal.email}?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
+      setStatus("success");
+      setFeedback("Your email app should open with the message ready. Just press Send there.");
       return;
     }
 
@@ -73,15 +81,15 @@ export default function Contact() {
 
     try {
       await emailjs.send(
-        SERVICE_ID,
-        TEMPLATE_ID,
+        SERVICE_ID!,
+        TEMPLATE_ID!,
         {
           name: fields.name.trim(),
           email: fields.email.trim(),
           message: fields.message.trim(),
           title: "New message from your portfolio",
         },
-        { publicKey: PUBLIC_KEY },
+        { publicKey: PUBLIC_KEY! },
       );
       setStatus("success");
       setFeedback("Thank you! Your message has been sent. I'll get back to you soon.");
@@ -233,6 +241,16 @@ export default function Contact() {
                 )}
               </button>
             </div>
+
+            {!EMAILJS_READY && (
+              <p className="mt-4 text-xs">
+                This form opens your email app to send the message. You can also email me directly at{" "}
+                <a href={`mailto:${personal.email}`} className="font-medium text-brand hover:underline">
+                  {personal.email}
+                </a>
+                .
+              </p>
+            )}
 
             {/* Live region announces success/error to screen readers */}
             <div aria-live="polite" role="status">
