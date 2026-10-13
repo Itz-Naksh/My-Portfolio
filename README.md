@@ -1,6 +1,6 @@
 # My Portfolio
 
-A personal portfolio built with **Next.js (App Router)**, **TypeScript**, **Tailwind CSS v4**, **Framer Motion**, **lucide-react**, and **EmailJS**.
+A personal portfolio built with **Next.js (App Router)**, **TypeScript**, **Tailwind CSS v4**, **Framer Motion**, and **lucide-react**. No backend: the contact form opens the visitor's email app.
 
 ---
 
@@ -55,30 +55,9 @@ Theme colours are CSS variables at the top of [`src/app/globals.css`](src/app/gl
 
 ---
 
-## 3. Set up EmailJS (contact form)
+## 3. Contact form
 
-1. Create a free account at [emailjs.com](https://www.emailjs.com/).
-2. **Email Services** → **Add New Service** → connect your email (e.g. Gmail). Copy the **Service ID**.
-3. **Email Templates** → **Create New Template**. Use these variables in the template:
-   - `{{name}}`: sender's name
-   - `{{email}}`: sender's email (tip: set **Reply To** to `{{email}}`)
-   - `{{message}}`: the message
-   - `{{title}}`: subject line ("New message from your portfolio")
-
-   Set **To Email** to your own address, save, and copy the **Template ID**.
-4. **Account** → **General** → copy your **Public Key**.
-5. Put the three values in `.env.local` (already created; see `.env.example` for the format):
-
-   ```env
-   NEXT_PUBLIC_EMAILJS_SERVICE_ID=service_xxxxxxx
-   NEXT_PUBLIC_EMAILJS_TEMPLATE_ID=template_xxxxxxx
-   NEXT_PUBLIC_EMAILJS_PUBLIC_KEY=xxxxxxxxxxxxxxx
-   ```
-
-6. Restart `npm run dev` and send yourself a test message.
-
-> Until the keys are set, the form shows a friendly error asking visitors to email you directly.
-> Tip: in EmailJS **Account → Security**, restrict requests to your domain to prevent abuse.
+The form needs no setup or backend. When a visitor clicks **Send**, their email app opens with the message addressed to the email in `personal.email`.
 
 ---
 
@@ -93,14 +72,12 @@ Theme colours are CSS variables at the top of [`src/app/globals.css`](src/app/gl
    git remote add origin https://github.com/<your-username>/my-portfolio.git
    git push -u origin main
    ```
-   (`.env.local` is git-ignored, so your keys stay private.)
 2. Go to [vercel.com](https://vercel.com) and sign in with GitHub.
 3. Click **Add New… → Project** and **Import** your `my-portfolio` repository.
 4. Vercel detects Next.js automatically; leave the build settings as they are.
-5. Open **Environment Variables** and add the three `NEXT_PUBLIC_EMAILJS_*` variables with your values.
-6. Click **Deploy**. In about a minute you'll get a live URL like `my-portfolio.vercel.app`.
-7. Update `personal.siteUrl` in `portfolio.ts` to that URL (or your custom domain), commit, and push. Vercel redeploys automatically on every push.
-8. *(Optional)* **Project → Settings → Domains** to add a custom domain.
+5. Click **Deploy**. In about a minute you'll get a live URL like `my-portfolio.vercel.app`.
+6. Update `personal.siteUrl` in `portfolio.ts` to that URL (or your custom domain), commit, and push. Vercel redeploys automatically on every push.
+7. *(Optional)* **Project → Settings → Domains** to add a custom domain.
 
 ---
 

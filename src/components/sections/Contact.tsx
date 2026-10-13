@@ -1,8 +1,7 @@
 "use client";
 
 import { useState, type ChangeEvent, type FormEvent } from "react";
-import emailjs from "@emailjs/browser";
-import { CircleAlert, CircleCheck, LoaderCircle, Mail, MapPin, Send } from "lucide-react";
+import { CircleAlert, CircleCheck, Mail, MapPin, Send } from "lucide-react";
 import { personal } from "@/data/portfolio";
 import { buttonStyles } from "@/lib/styles";
 import Section from "@/components/ui/Section";
@@ -10,16 +9,9 @@ import SectionHeading from "@/components/ui/SectionHeading";
 import Reveal from "@/components/ui/Reveal";
 import SocialLinks from "@/components/ui/SocialLinks";
 
-/* EmailJS credentials come from .env.local (see .env.example) */
-const SERVICE_ID = process.env.NEXT_PUBLIC_EMAILJS_SERVICE_ID;
-const TEMPLATE_ID = process.env.NEXT_PUBLIC_EMAILJS_TEMPLATE_ID;
-const PUBLIC_KEY = process.env.NEXT_PUBLIC_EMAILJS_PUBLIC_KEY;
-// Placeholder values from .env.example count as "not set up"
-const EMAILJS_READY = [SERVICE_ID, TEMPLATE_ID, PUBLIC_KEY].every((v) => v && !v.startsWith("your_"));
-
 type Fields = { name: string; email: string; message: string };
 type Errors = Partial<Record<keyof Fields, string>>;
-type Status = "idle" | "sending" | "success" | "error";
+type Status = "idle" | "success" | "error";
 
 const EMAIL_PATTERN = /^[^\s@]+@[^\s@]+\.[^\s@]{2,}$/;
 
@@ -48,7 +40,7 @@ export default function Contact() {
     if (errors[name as keyof Fields]) setErrors((prev) => ({ ...prev, [name]: undefined }));
   };
 
-  const handleSubmit = async (e: FormEvent<HTMLFormElement>) => {
+  const handleSubmit = (e: FormEvent<HTMLFormElement>) => {
     e.preventDefault();
 
     // Hidden honeypot field: real people leave it empty, bots fill it
@@ -64,40 +56,12 @@ export default function Contact() {
       return;
     }
 
-    // No EmailJS keys yet: open the visitor's email app with the message filled in
-    if (!EMAILJS_READY) {
-      const subject = `Portfolio message from ${fields.name.trim()}`;
-      const body = `${fields.message.trim()}
-
-— ${fields.name.trim()} (${fields.email.trim()})`;
-      window.location.href = `mailto:${personal.email}?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
-      setStatus("success");
-      setFeedback("Your email app should open with the message ready. Just press Send there.");
-      return;
-    }
-
-    setStatus("sending");
-    setFeedback("");
-
-    try {
-      await emailjs.send(
-        SERVICE_ID!,
-        TEMPLATE_ID!,
-        {
-          name: fields.name.trim(),
-          email: fields.email.trim(),
-          message: fields.message.trim(),
-          title: "New message from your portfolio",
-        },
-        { publicKey: PUBLIC_KEY! },
-      );
-      setStatus("success");
-      setFeedback("Thank you! Your message has been sent. I'll get back to you soon.");
-      setFields({ name: "", email: "", message: "" });
-    } catch {
-      setStatus("error");
-      setFeedback(`Sorry, something went wrong. Please try again or email me at ${personal.email}.`);
-    }
+    // No backend: open the visitor's email app with the message already filled in
+    const subject = `Portfolio message from ${fields.name.trim()}`;
+    const body = `${fields.message.trim()}\n\n— ${fields.name.trim()} (${fields.email.trim()})`;
+    window.location.href = `mailto:${personal.email}?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
+    setStatus("success");
+    setFeedback("Your email app should open with the message ready. Just press Send there.");
   };
 
   const fieldClass = (key: keyof Fields) =>
@@ -227,30 +191,19 @@ export default function Contact() {
             </div>
 
             <div className="mt-6 flex flex-col gap-4 sm:flex-row sm:items-center">
-              <button type="submit" disabled={status === "sending"} className={buttonStyles.primary}>
-                {status === "sending" ? (
-                  <>
-                    <LoaderCircle size={18} className="animate-spin" aria-hidden="true" />
-                    Sending...
-                  </>
-                ) : (
-                  <>
-                    <Send size={18} aria-hidden="true" />
-                    Send Message
-                  </>
-                )}
+              <button type="submit" className={buttonStyles.primary}>
+                <Send size={18} aria-hidden="true" />
+                Send Message
               </button>
             </div>
 
-            {!EMAILJS_READY && (
-              <p className="mt-4 text-xs">
+            <p className="mt-4 text-xs">
                 Clicking Send opens your email app with your message ready to go. Prefer to write yourself? Reach me at{" "}
                 <a href={`mailto:${personal.email}`} className="font-medium text-brand hover:underline">
                   {personal.email}
                 </a>
                 .
-              </p>
-            )}
+            </p>
 
             {/* Live region announces success/error to screen readers */}
             <div aria-live="polite" role="status">
