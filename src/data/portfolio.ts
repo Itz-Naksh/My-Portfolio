@@ -91,7 +91,7 @@ export const personal = {
   ],
   seeking: "IT · Business · Accounting",
   currently: "Building full-stack projects and growing my accounting and finance expertise",
-  email: "fathinaksh14@gmail.com",
+  email: "nakshabanu2004@gmail.com",
   resumeUrl: "/resume.pdf",
   profileImage: "/images/hero-tech.jpg", // set to "" to show the drawn tech illustration instead
   siteUrl: "https://fathima-naksha.vercel.app", // update after deploying (used for SEO / Open Graph)
