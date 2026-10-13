@@ -79,18 +79,18 @@ export interface Certification {
 export const personal = {
   name: "Fathima Naksha Banu",
   initials: "FN",
-  role: "Software Engineering Intern",
+  role: "Full-Stack Developer",
   // Rotating phrases for the typing animation under your name in the hero
   typingRoles: ["Full-Stack Developer", "PHP & Laravel Developer", "Next.js & React Developer", "Tech + Business Problem Solver"],
   location: "Ampara, Sri Lanka",
   tagline: "Building reliable, database-driven web applications.",
   bio: [
-    "I'm a Software Engineering Intern at Alpha Health Group with a background that combines technology, business, and accounting. Before this, I completed a remote full-stack web development internship with Codomax Digital Solutions, working with an India-based team on real-world projects.",
+    "I'm a full-stack developer with a background that combines technology, business, and accounting. I build practical web applications, from PHP/Laravel and MySQL systems to modern Next.js apps, and I've gained real-world experience working with development teams through industry internships.",
     "Alongside my HND in Information Technology at SLIATE, I'm a BBA undergraduate at the University of Peradeniya and a Member of AAT Sri Lanka (MAAT). This gives me a strong understanding of financial reporting, taxation, and business processes, which helps me build software that solves real business problems.",
-    "I enjoy building practical applications, from PHP/Laravel and MySQL systems to modern Next.js apps, and learning how real development teams work. I'm a Student Member of the Computer Society of Sri Lanka (CSSL), and I'm always happy to connect with developers, mentors, and professionals in tech and finance.",
+    "I enjoy turning real business problems into clean, reliable software and I keep learning new tools along the way. I'm a Student Member of the Computer Society of Sri Lanka (CSSL), and I'm always happy to connect with developers, mentors, and professionals in tech and finance.",
   ],
-  seeking: "Software Engineering Intern @ Alpha Health Group",
-  currently: "Building web features with Laravel & AJAX at Alpha Health Group",
+  seeking: "IT · Business · Accounting",
+  currently: "Building full-stack projects with Laravel and Next.js, and exploring AI tools",
   email: "fathinaksh14@gmail.com",
   resumeUrl: "/resume.pdf",
   profileImage: "/images/hero-tech.jpg", // set to "" to show the drawn tech illustration instead
