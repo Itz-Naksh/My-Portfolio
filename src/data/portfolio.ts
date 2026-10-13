@@ -94,7 +94,7 @@ export const personal = {
   email: "fathinaksh14@gmail.com",
   resumeUrl: "/resume.pdf",
   profileImage: "/images/hero-tech.jpg", // set to "" to show the drawn tech illustration instead
-  siteUrl: "https://my-portfolio-two-alpha-48.vercel.app", // update after deploying (used for SEO / Open Graph)
+  siteUrl: "https://my-portfolio-naksh.vercel.app", // live address (used for SEO / Open Graph)
 };
 
 // Paste your profile links here. Leave a link as "" to hide that icon.
