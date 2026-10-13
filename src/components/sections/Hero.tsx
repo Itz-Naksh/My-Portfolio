@@ -91,7 +91,7 @@ export default function Hero() {
           initial={{ scale: 0.96 }}
           animate={{ scale: 1 }}
           transition={{ duration: 0.8, ease: [0.22, 1, 0.36, 1], delay: 0.2 }}
-          className="relative mx-auto w-64 sm:w-80 lg:w-full lg:max-w-sm"
+          className="relative mx-auto w-56 sm:w-64 lg:w-72"
         >
           {/* Gradient ring */}
           <div className="bg-gradient-brand rounded-[2rem] p-1.5 shadow-lift">
@@ -102,7 +102,7 @@ export default function Hero() {
                 fill
                 priority
                 unoptimized={personal.profileImage.endsWith(".svg")}
-                sizes="(min-width: 1024px) 384px, 320px"
+                sizes="(min-width: 1024px) 288px, 256px"
                 className="object-cover"
               />
             </div>
