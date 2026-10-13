@@ -284,7 +284,7 @@ export const timeline: TimelineEntry[] = [
 export const certifications: Certification[] = [
   { name: "Get Started with Generative AI and Agents in Azure", issuer: "Microsoft", year: "Sep 2026" },
   { name: "Enterprise Security in Practice", issuer: "IBM", year: "Oct 2026" },
-  { name: "Introduction to Modern AI", issuer: "Cisco", year: "Sep 2026" },
+  { name: "Introduction to Modern AI", issuer: "Cisco", year: "Sep 2026", image: "/images/certificates/cisco-modern-ai.png" },
   { name: "Claude 101", issuer: "Anthropic", year: "Oct 2026" },
   { name: "Web Development", issuer: "Sololearn", year: "Oct 2026" },
 ];

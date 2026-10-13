@@ -1,5 +1,6 @@
 import Image from "next/image";
-import { Award, BadgeCheck, Eye, Users } from "lucide-react";
+import { Award, BadgeCheck, Users } from "lucide-react";
+import CertificateViewer from "./CertificateViewer";
 import type { Certification } from "@/data/portfolio";
 import { buttonStyles } from "@/lib/styles";
 
@@ -48,11 +49,7 @@ export default function CertificationCard({
           <h3 className="text-base leading-snug">{name}</h3>
           {meta}
           <div className="mt-auto flex flex-wrap gap-2 pt-4">
-            <a href={image} target="_blank" rel="noopener noreferrer" className={buttonStyles.small}>
-              <Eye size={15} aria-hidden="true" />
-              View Certificate
-              <span className="sr-only"> for {name} (opens in a new tab)</span>
-            </a>
+            <CertificateViewer image={image} name={name} />
             {url && (
               <a href={url} target="_blank" rel="noopener noreferrer" className={buttonStyles.smallOutline}>
                 <BadgeCheck size={15} aria-hidden="true" />
