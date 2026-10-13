@@ -93,7 +93,7 @@ export const personal = {
   currently: "Building web features with Laravel & AJAX at Alpha Health Group",
   email: "fathinaksh14@gmail.com",
   resumeUrl: "/resume.pdf",
-  profileImage: "", // add e.g. "/images/avatar.jpg" to show a picture in the hero and About
+  profileImage: "/images/hero-tech.jpg", // set to "" to show the drawn tech illustration instead
   siteUrl: "https://fathima-naksha.vercel.app", // update after deploying (used for SEO / Open Graph)
 };
 

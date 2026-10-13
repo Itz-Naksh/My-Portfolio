@@ -100,7 +100,7 @@ export default function Hero() {
             <div className="relative aspect-[4/5] overflow-hidden rounded-[1.65rem] bg-alt">
               <Image
                 src={personal.profileImage}
-                alt={`Portrait of ${personal.name}`}
+                alt="Tech illustration of a woman working with data and AI dashboards"
                 fill
                 priority
                 unoptimized={personal.profileImage.endsWith(".svg")}

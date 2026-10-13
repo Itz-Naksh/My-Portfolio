@@ -16,7 +16,7 @@ export default function About() {
           <div className="relative aspect-square overflow-hidden rounded-2xl border border-border bg-surface shadow-soft">
             <Image
               src={personal.profileImage}
-              alt={`${personal.name} smiling`}
+              alt="Tech illustration of a woman working with data and AI dashboards"
               fill
               sizes="(min-width: 1024px) 400px, 320px"
               className="object-cover"
