@@ -12,8 +12,8 @@ export default function About() {
 
       <div className={`grid items-center gap-12 ${personal.profileImage ? "lg:grid-cols-[0.8fr_1.2fr]" : "mx-auto max-w-3xl"}`}>
         {personal.profileImage && (
-        <Reveal className="mx-auto w-full max-w-xs lg:max-w-none">
-          <div className="relative aspect-square overflow-hidden rounded-2xl border border-border bg-surface shadow-soft">
+        <Reveal className="mx-auto w-full max-w-xs lg:max-w-sm">
+          <div className="relative aspect-[4/5] overflow-hidden rounded-2xl border border-border bg-surface shadow-soft">
             <Image
               src={personal.profileImage}
               alt="Tech illustration of a woman working with data and AI dashboards"
