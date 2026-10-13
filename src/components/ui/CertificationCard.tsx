@@ -49,7 +49,7 @@ export default function CertificationCard({
           <h3 className="text-base leading-snug">{name}</h3>
           {meta}
           <div className="mt-auto flex flex-wrap gap-2 pt-4">
-            <CertificateViewer image={image} name={name} />
+            <CertificateViewer image={image} name={name} label={variant === "membership" ? "View Card" : "View Certificate"} />
             {url && (
               <a href={url} target="_blank" rel="noopener noreferrer" className={buttonStyles.smallOutline}>
                 <BadgeCheck size={15} aria-hidden="true" />

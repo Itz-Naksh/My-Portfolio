@@ -293,7 +293,7 @@ export const certifications: Certification[] = [
 
 export const memberships: Certification[] = [
   { name: "Member (MAAT)", issuer: "AAT Sri Lanka" },
-  { name: "Student Member", issuer: "Computer Society of Sri Lanka (CSSL)", year: "Since Aug 2026" },
+  { name: "Student Member", issuer: "Computer Society of Sri Lanka (CSSL)", year: "Since Aug 2026", image: "/images/certificates/cssl-card.png" },
 ];
 
 /* ---------- Navigation ---------- */

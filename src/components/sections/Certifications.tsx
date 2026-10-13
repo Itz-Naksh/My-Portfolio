@@ -22,7 +22,7 @@ export default function Certifications() {
       </ul>
 
       <h3 className="mt-12 mb-5 text-xl">Professional memberships</h3>
-      <ul className="grid gap-5 sm:grid-cols-2 lg:grid-cols-3">
+      <ul className="grid items-start gap-5 sm:grid-cols-2 lg:grid-cols-3">
         {memberships.map((m, i) => (
           <li key={m.name}>
             <Reveal delay={i * 0.08} className="h-full">
