@@ -244,7 +244,7 @@ export default function Contact() {
 
             {!EMAILJS_READY && (
               <p className="mt-4 text-xs">
-                This form opens your email app to send the message. You can also email me directly at{" "}
+                Clicking Send opens your email app with your message ready to go. Prefer to write yourself? Reach me at{" "}
                 <a href={`mailto:${personal.email}`} className="font-medium text-brand hover:underline">
                   {personal.email}
                 </a>
