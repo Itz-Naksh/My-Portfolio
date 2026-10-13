@@ -1,4 +1,5 @@
 import Image from "next/image";
+import { MapPin } from "lucide-react";
 import { personal, stats } from "@/data/portfolio";
 import Section from "@/components/ui/Section";
 import SectionHeading from "@/components/ui/SectionHeading";
@@ -26,9 +27,11 @@ export default function About() {
         )}
 
         <Reveal delay={0.1}>
-          <h3 className="text-2xl">
-            {personal.role} based in {personal.location}
-          </h3>
+          <h3 className="text-2xl">{personal.role}</h3>
+          <p className="mt-1 inline-flex items-center gap-1.5 text-sm">
+            <MapPin size={15} aria-hidden="true" className="text-brand" />
+            {personal.location}
+          </p>
           <div className="mt-4 space-y-4">
             {personal.bio.map((paragraph) => (
               <p key={paragraph.slice(0, 24)}>{paragraph}</p>
