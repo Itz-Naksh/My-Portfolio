@@ -42,14 +42,14 @@ export default async function CaseStudyPage({ params }: { params: Params }) {
         <section aria-labelledby="case-study-heading" className="container-page">
           <Link
             href="/#projects"
-            className="inline-flex items-center gap-2 text-sm font-medium text-primary hover:text-primary-hover"
+            className="inline-flex items-center gap-2 text-sm font-medium text-brand hover:text-badge"
           >
             <ArrowLeft size={16} aria-hidden="true" />
             Back to projects
           </Link>
 
           <Reveal className="mt-6 max-w-3xl">
-            <p className="inline-block rounded-full bg-accent-light px-4 py-1 text-sm font-medium text-primary-hover">
+            <p className="inline-block rounded-full bg-accent-light px-4 py-1 text-sm font-medium text-badge">
               Case study
             </p>
             <h1 id="case-study-heading" className="text-gradient mt-4 pb-1 text-4xl sm:text-5xl">
@@ -115,7 +115,7 @@ export default async function CaseStudyPage({ params }: { params: Params }) {
           <Reveal delay={0.1}>
             <div className="h-full rounded-2xl border border-border bg-alt p-7">
               <h2 className="inline-flex items-center gap-2 text-xl">
-                <Lightbulb size={20} className="text-primary" aria-hidden="true" />
+                <Lightbulb size={20} className="text-brand" aria-hidden="true" />
                 The problem
               </h2>
               <p className="mt-3">{study.problem}</p>
@@ -136,7 +136,7 @@ export default async function CaseStudyPage({ params }: { params: Params }) {
                 <li key={f.title}>
                   <Reveal delay={i * 0.06} className="h-full">
                     <div className="h-full rounded-2xl border border-border bg-surface p-6 shadow-soft">
-                      <CircleCheck size={22} className="text-primary" aria-hidden="true" />
+                      <CircleCheck size={22} className="text-brand" aria-hidden="true" />
                       <h3 className="mt-3 text-lg">{f.title}</h3>
                       <p className="mt-2 text-sm">{f.description}</p>
                     </div>

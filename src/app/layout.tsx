@@ -49,8 +49,14 @@ export const metadata: Metadata = {
 };
 
 export const viewport: Viewport = {
-  themeColor: "#7C5CBF",
+  themeColor: [
+    { media: "(prefers-color-scheme: light)", color: "#FDFBFF" },
+    { media: "(prefers-color-scheme: dark)", color: "#0E0A18" },
+  ],
 };
+
+// Runs before the page paints: applies the saved theme (dark by default) so there's no flash
+const themeScript = `(function(){try{var t=localStorage.getItem("theme");document.documentElement.dataset.theme=t==="light"?"light":"dark";}catch(e){document.documentElement.dataset.theme="dark";}})();`;
 
 // Structured data so search engines understand who this site is about
 const currentJob = timeline.find((t) => t.type === "work");
@@ -69,7 +75,11 @@ const personJsonLd = {
 
 export default function RootLayout({ children }: Readonly<{ children: React.ReactNode }>) {
   return (
-    <html lang="en" className={`${inter.variable} ${poppins.variable}`}>
+    // suppressHydrationWarning: data-theme is set by the script below before React loads
+    <html lang="en" data-theme="dark" className={`${inter.variable} ${poppins.variable}`} suppressHydrationWarning>
+      <head>
+        <script dangerouslySetInnerHTML={{ __html: themeScript }} />
+      </head>
       <body>
         {/* Skip link for keyboard and screen-reader users */}
         <a

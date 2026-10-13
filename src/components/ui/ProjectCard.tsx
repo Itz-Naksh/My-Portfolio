@@ -46,7 +46,7 @@ export default function ProjectCard({
 
       <div className={`flex flex-1 flex-col p-6 ${featured ? "lg:p-8" : ""}`}>
         {featured && (
-          <p className="mb-3 inline-flex w-fit items-center gap-1.5 rounded-full bg-accent-light px-3 py-1 text-xs font-semibold text-primary-hover">
+          <p className="mb-3 inline-flex w-fit items-center gap-1.5 rounded-full bg-accent-light px-3 py-1 text-xs font-semibold text-badge">
             <Sparkles size={13} aria-hidden="true" />
             Featured project
           </p>

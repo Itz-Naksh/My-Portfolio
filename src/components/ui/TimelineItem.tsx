@@ -20,11 +20,11 @@ export default function TimelineItem({ type, title, organization, dates, descrip
 
       <article className="rounded-2xl border border-border bg-surface p-6 shadow-soft transition-all duration-300 hover:-translate-y-1 hover:shadow-lift">
         <div className="flex flex-wrap items-center justify-between gap-2">
-          <p className="inline-flex items-center gap-2 text-sm font-medium text-primary">
+          <p className="inline-flex items-center gap-2 text-sm font-medium text-brand">
             <Icon size={16} aria-hidden="true" />
             {type === "work" ? "Experience" : "Education"}
           </p>
-          <p className="rounded-full bg-accent-light px-3 py-0.5 text-xs font-medium text-primary-hover">
+          <p className="rounded-full bg-accent-light px-3 py-0.5 text-xs font-medium text-badge">
             {dates}
           </p>
         </div>

@@ -37,7 +37,7 @@ export default function Hero() {
         <motion.div variants={container} initial="hidden" animate="show" className="text-center lg:text-left">
           <motion.p
             variants={item}
-            className="mb-5 inline-flex items-center gap-2 rounded-full border border-border bg-surface px-4 py-1.5 text-sm font-medium text-primary-hover shadow-soft"
+            className="mb-5 inline-flex items-center gap-2 rounded-full border border-border bg-surface px-4 py-1.5 text-sm font-medium text-badge shadow-soft"
           >
             <Sparkles size={15} aria-hidden="true" />
             {personal.seeking}
@@ -67,7 +67,7 @@ export default function Hero() {
             variants={item}
             className="mt-3 inline-flex items-center gap-1.5 text-sm"
           >
-            <MapPin size={15} aria-hidden="true" className="text-primary" />
+            <MapPin size={15} aria-hidden="true" className="text-brand" />
             {personal.location}
           </motion.p>
 

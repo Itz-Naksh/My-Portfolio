@@ -12,7 +12,7 @@ interface SectionHeadingProps {
 export default function SectionHeading({ id, eyebrow, title, subtitle }: SectionHeadingProps) {
   return (
     <Reveal className="mx-auto mb-14 max-w-2xl text-center">
-      <p className="mb-3 inline-block rounded-full bg-accent-light px-4 py-1 text-sm font-medium text-primary-hover">
+      <p className="mb-3 inline-block rounded-full bg-accent-light px-4 py-1 text-sm font-medium text-badge">
         {eyebrow}
       </p>
       <h2 id={`${id}-heading`} className="text-3xl sm:text-4xl">

@@ -70,7 +70,8 @@ export interface Certification {
   name: string;
   issuer?: string; // omit if unknown
   year?: string; // omit if you don't want to show a year
-  url?: string; // optional link to the credential
+  url?: string; // optional link to the credential (shows a "Verify" button)
+  image?: string; // optional certificate picture in /public, e.g. "/images/certificates/claude-101.png"
 }
 
 /* ---------- Personal details ---------- */

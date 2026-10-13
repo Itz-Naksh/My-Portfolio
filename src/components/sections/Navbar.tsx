@@ -6,6 +6,7 @@ import { AnimatePresence, motion } from "framer-motion";
 import { Download, Menu, X } from "lucide-react";
 import { navLinks, personal } from "@/data/portfolio";
 import { buttonStyles } from "@/lib/styles";
+import ThemeToggle from "@/components/ui/ThemeToggle";
 
 /**
  * Sticky navbar: transparent at the top of the page, white + blurred
@@ -41,7 +42,7 @@ export default function Navbar() {
   return (
     <header
       className={`fixed inset-x-0 top-0 z-50 transition-all duration-300 ${
-        solid ? "border-b border-border bg-white/80 shadow-soft backdrop-blur-lg" : "bg-transparent"
+        solid ? "border-b border-border bg-surface/80 shadow-soft backdrop-blur-lg" : "bg-transparent"
       }`}
     >
       <nav aria-label="Main navigation" className="container-page flex h-16 items-center justify-between sm:h-20">
@@ -60,7 +61,7 @@ export default function Navbar() {
             <li key={link.href}>
               <Link
                 href={link.href}
-                className="relative text-sm font-medium text-heading transition-colors hover:text-primary after:absolute after:-bottom-1 after:left-0 after:h-0.5 after:w-0 after:rounded-full after:bg-primary after:transition-all after:duration-300 hover:after:w-full"
+                className="relative text-sm font-medium text-heading transition-colors hover:text-brand after:absolute after:-bottom-1 after:left-0 after:h-0.5 after:w-0 after:rounded-full after:bg-primary after:transition-all after:duration-300 hover:after:w-full"
               >
                 {link.label}
               </Link>
@@ -69,6 +70,7 @@ export default function Navbar() {
         </ul>
 
         <div className="flex items-center gap-2">
+          <ThemeToggle />
           <a href={personal.resumeUrl} download className={`${buttonStyles.small} hidden sm:inline-flex`}>
             <Download size={16} aria-hidden="true" />
             Download Resume
@@ -105,7 +107,7 @@ export default function Navbar() {
                   <Link
                     href={link.href}
                     onClick={() => setOpen(false)}
-                    className="block rounded-xl px-3 py-3 font-medium text-heading transition-colors hover:bg-alt hover:text-primary"
+                    className="block rounded-xl px-3 py-3 font-medium text-heading transition-colors hover:bg-alt hover:text-brand"
                   >
                     {link.label}
                   </Link>

@@ -117,16 +117,16 @@ export default function Contact() {
               <li>
                 <a
                   href={`mailto:${personal.email}`}
-                  className="group flex items-center gap-3 text-heading transition-colors hover:text-primary"
+                  className="group flex items-center gap-3 text-heading transition-colors hover:text-brand"
                 >
-                  <span className="flex h-10 w-10 items-center justify-center rounded-xl bg-surface text-primary shadow-soft">
+                  <span className="flex h-10 w-10 items-center justify-center rounded-xl bg-surface text-brand shadow-soft">
                     <Mail size={18} aria-hidden="true" />
                   </span>
                   <span className="break-all">{personal.email}</span>
                 </a>
               </li>
               <li className="flex items-center gap-3 text-heading">
-                <span className="flex h-10 w-10 items-center justify-center rounded-xl bg-surface text-primary shadow-soft">
+                <span className="flex h-10 w-10 items-center justify-center rounded-xl bg-surface text-brand shadow-soft">
                   <MapPin size={18} aria-hidden="true" />
                 </span>
                 {personal.location}
@@ -161,7 +161,7 @@ export default function Contact() {
                   className={fieldClass("name")}
                 />
                 {errors.name && (
-                  <p id="name-error" className="mt-1.5 text-sm text-red-600">
+                  <p id="name-error" className="mt-1.5 text-sm text-red-600 dark:text-red-400">
                     {errors.name}
                   </p>
                 )}
@@ -183,7 +183,7 @@ export default function Contact() {
                   className={fieldClass("email")}
                 />
                 {errors.email && (
-                  <p id="email-error" className="mt-1.5 text-sm text-red-600">
+                  <p id="email-error" className="mt-1.5 text-sm text-red-600 dark:text-red-400">
                     {errors.email}
                   </p>
                 )}
@@ -206,7 +206,7 @@ export default function Contact() {
                 className={`${fieldClass("message")} resize-y`}
               />
               {errors.message && (
-                <p id="message-error" className="mt-1.5 text-sm text-red-600">
+                <p id="message-error" className="mt-1.5 text-sm text-red-600 dark:text-red-400">
                   {errors.message}
                 </p>
               )}
@@ -240,8 +240,8 @@ export default function Contact() {
                 <p
                   className={`mt-5 flex items-start gap-2 rounded-xl px-4 py-3 text-sm ${
                     status === "success"
-                      ? "bg-emerald-50 text-emerald-800"
-                      : "bg-red-50 text-red-700"
+                      ? "bg-emerald-500/10 text-emerald-700 dark:text-emerald-300"
+                      : "bg-red-500/10 text-red-700 dark:text-red-300"
                   }`}
                 >
                   {status === "success" ? (

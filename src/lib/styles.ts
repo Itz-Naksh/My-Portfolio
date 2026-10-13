@@ -5,7 +5,7 @@ const base =
 
 export const buttonStyles = {
   primary: `${base} bg-primary px-6 py-3 text-white shadow-soft hover:bg-primary-hover hover:shadow-lift`,
-  outline: `${base} border-2 border-primary px-6 py-[10px] text-primary hover:bg-primary hover:text-white`,
+  outline: `${base} border-2 border-primary px-6 py-[10px] text-brand hover:bg-primary hover:text-white`,
   small: `${base} bg-primary px-4 py-2 text-sm text-white hover:bg-primary-hover`,
-  smallOutline: `${base} border border-border bg-surface px-4 py-2 text-sm text-heading hover:border-primary hover:text-primary`,
+  smallOutline: `${base} border border-border bg-surface px-4 py-2 text-sm text-heading hover:border-primary hover:text-brand`,
 };
