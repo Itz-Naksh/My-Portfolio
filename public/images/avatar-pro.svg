@@ -1,0 +1,141 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="100 140 600 750" width="800" height="1000" role="img" aria-label="Professional illustrated headshot of a woman wearing a hijab and a dark blazer">
+  <defs>
+    <!-- Studio backdrop -->
+    <radialGradient id="studio" cx="50%" cy="38%" r="75%">
+      <stop offset="0" stop-color="#FFFFFF"/>
+      <stop offset="0.55" stop-color="#F3EEF8"/>
+      <stop offset="1" stop-color="#DCD2E8"/>
+    </radialGradient>
+    <!-- Skin with soft edge shading -->
+    <radialGradient id="skin" cx="48%" cy="42%" r="62%">
+      <stop offset="0" stop-color="#E6B48F"/>
+      <stop offset="0.7" stop-color="#D9A27D"/>
+      <stop offset="1" stop-color="#BF8664"/>
+    </radialGradient>
+    <!-- Hijab fabric with light from top-left -->
+    <linearGradient id="hijab" x1="0.15" y1="0" x2="0.85" y2="1">
+      <stop offset="0" stop-color="#C691AE"/>
+      <stop offset="0.5" stop-color="#B07795"/>
+      <stop offset="1" stop-color="#94607C"/>
+    </linearGradient>
+    <linearGradient id="hijabFront" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#C995B1"/>
+      <stop offset="1" stop-color="#A66E8C"/>
+    </linearGradient>
+    <linearGradient id="hijabShade" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#8C5673"/>
+      <stop offset="1" stop-color="#9E6884"/>
+    </linearGradient>
+    <!-- Blazer -->
+    <linearGradient id="blazer" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#3C3160"/>
+      <stop offset="1" stop-color="#2A2245"/>
+    </linearGradient>
+    <linearGradient id="lapel" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#4A3D74"/>
+      <stop offset="1" stop-color="#352B57"/>
+    </linearGradient>
+    <radialGradient id="blush" cx="50%" cy="50%" r="50%">
+      <stop offset="0" stop-color="#E58C95" stop-opacity="0.35"/>
+      <stop offset="1" stop-color="#E58C95" stop-opacity="0"/>
+    </radialGradient>
+    <filter id="soft" x="-10%" y="-10%" width="120%" height="125%">
+      <feDropShadow dx="0" dy="10" stdDeviation="14" flood-color="#2A2245" flood-opacity="0.18"/>
+    </filter>
+  </defs>
+
+  <!-- Background -->
+  <rect width="800" height="1000" fill="url(#studio)"/>
+
+  <!-- Blazer -->
+  <g filter="url(#soft)">
+    <path d="M50 1000 C62 868 165 788 290 768 L510 768 C635 788 738 868 750 1000 Z" fill="url(#blazer)"/>
+  </g>
+  <!-- Shirt -->
+  <path d="M322 780 L400 1000 L478 780 Z" fill="#F7F4F1"/>
+  <path d="M400 1000 L366 880 L400 905 L434 880 Z" fill="#E7E1DC"/>
+  <!-- Notched lapels -->
+  <path d="M292 770 L360 1000 L282 1000 L222 878 L268 858 L246 826 Z" fill="url(#lapel)"/>
+  <path d="M508 770 L440 1000 L518 1000 L578 878 L532 858 L554 826 Z" fill="url(#lapel)"/>
+  <path d="M292 770 L360 1000" stroke="#251E3D" stroke-width="2" opacity="0.6"/>
+  <path d="M508 770 L440 1000" stroke="#251E3D" stroke-width="2" opacity="0.6"/>
+
+  <!-- Hijab: outer wrap and shoulder drape -->
+  <path d="M400 188
+           C512 188 578 280 580 400
+           C582 500 568 585 592 662
+           C608 716 632 752 652 790
+           C590 830 495 846 400 848
+           C305 846 210 830 148 790
+           C168 752 192 716 208 662
+           C232 585 218 500 220 400
+           C222 280 288 188 400 188 Z" fill="url(#hijab)" filter="url(#soft)"/>
+
+  <!-- Shadow beneath the face where the fabric wraps -->
+  <path d="M292 500 C300 590 345 640 400 652 C455 640 500 590 508 500 C522 600 520 690 500 760 C470 790 435 800 400 802 C365 800 330 790 300 760 C280 690 278 600 292 500 Z" fill="url(#hijabShade)"/>
+
+  <!-- Diagonal drape across the chest -->
+  <path d="M228 668 C290 712 370 736 455 738 C525 740 578 726 606 712 C618 742 634 766 652 790 C590 830 495 846 400 848 C305 846 210 830 150 792 C180 752 210 712 228 668 Z" fill="url(#hijabFront)"/>
+  <path d="M250 712 C320 752 420 772 520 764" fill="none" stroke="#8C5673" stroke-width="2.5" opacity="0.35" stroke-linecap="round"/>
+  <path d="M215 760 C300 800 420 815 540 800" fill="none" stroke="#8C5673" stroke-width="2.5" opacity="0.28" stroke-linecap="round"/>
+
+  <!-- Face -->
+  <path d="M400 300
+           C462 300 502 350 502 422
+           C502 494 466 548 400 556
+           C334 548 298 494 298 422
+           C298 350 338 300 400 300 Z" fill="url(#skin)"/>
+
+  <!-- Hijab front band framing the face -->
+  <path d="M284 470
+           C278 352 330 290 400 290
+           C470 290 522 352 516 470
+           C508 380 465 326 400 326
+           C335 326 292 380 284 470 Z" fill="url(#hijabFront)"/>
+  <!-- Under-chin wrap edge -->
+  <path d="M300 520 C322 590 360 622 400 626 C440 622 478 590 500 520 C494 600 456 650 400 656 C344 650 306 600 300 520 Z" fill="url(#hijabFront)"/>
+  <path d="M318 575 C345 615 375 630 400 632 C425 630 455 615 482 575" fill="none" stroke="#8C5673" stroke-width="2.5" opacity="0.5" stroke-linecap="round"/>
+  <!-- Fabric fold highlights on the crown -->
+  <path d="M300 300 C330 240 380 215 430 214" fill="none" stroke="#D8A9C2" stroke-width="4" opacity="0.6" stroke-linecap="round"/>
+  <path d="M520 330 C540 380 548 430 546 480" fill="none" stroke="#8C5673" stroke-width="3" opacity="0.35" stroke-linecap="round"/>
+
+  <!-- Eyebrows -->
+  <path d="M336 396 Q360 380 392 390 Q365 389 339 402 Z" fill="#2E1E18"/>
+  <path d="M464 396 Q440 380 408 390 Q435 389 461 402 Z" fill="#2E1E18"/>
+
+  <!-- Eyes -->
+  <path d="M342 426 Q366 408 392 426 Q366 440 342 426 Z" fill="#FBF6F2"/>
+  <path d="M408 426 Q434 408 458 426 Q434 440 408 426 Z" fill="#FBF6F2"/>
+  <circle cx="367" cy="425" r="10" fill="#4B2F23"/>
+  <circle cx="433" cy="425" r="10" fill="#4B2F23"/>
+  <circle cx="367" cy="425" r="4.5" fill="#1B1210"/>
+  <circle cx="433" cy="425" r="4.5" fill="#1B1210"/>
+  <circle cx="370" cy="421" r="2.5" fill="#FFFFFF"/>
+  <circle cx="436" cy="421" r="2.5" fill="#FFFFFF"/>
+  <!-- Upper lids and lashes -->
+  <path d="M340 427 Q366 405 394 425" fill="none" stroke="#2A1B16" stroke-width="4" stroke-linecap="round"/>
+  <path d="M406 425 Q434 405 460 427" fill="none" stroke="#2A1B16" stroke-width="4" stroke-linecap="round"/>
+  <path d="M341 426 L334 420" stroke="#2A1B16" stroke-width="2.5" stroke-linecap="round"/>
+  <path d="M459 426 L466 420" stroke="#2A1B16" stroke-width="2.5" stroke-linecap="round"/>
+  <!-- Soft lower lid shading -->
+  <path d="M348 434 Q366 442 388 432" fill="none" stroke="#B57A5C" stroke-width="2" opacity="0.5" stroke-linecap="round"/>
+  <path d="M412 432 Q434 442 452 434" fill="none" stroke="#B57A5C" stroke-width="2" opacity="0.5" stroke-linecap="round"/>
+
+  <!-- Nose -->
+  <path d="M392 458 Q388 472 390 480" fill="none" stroke="#B5795A" stroke-width="2.5" opacity="0.45" stroke-linecap="round"/>
+  <path d="M388 484 Q394 489 400 487 Q406 489 412 484" fill="none" stroke="#9E6449" stroke-width="2.5" opacity="0.6" stroke-linecap="round"/>
+
+  <!-- Cheeks -->
+  <ellipse cx="338" cy="478" rx="30" ry="20" fill="url(#blush)"/>
+  <ellipse cx="462" cy="478" rx="30" ry="20" fill="url(#blush)"/>
+
+  <!-- Lips: soft, confident smile -->
+  <path d="M366 508 Q384 502 400 507 Q416 502 434 508 Q400 520 366 508 Z" fill="#A24E5C"/>
+  <path d="M366 508 Q400 538 434 508 Q400 522 366 508 Z" fill="#C06A77"/>
+  <path d="M385 524 Q400 529 415 524" fill="none" stroke="#E7A2AA" stroke-width="2" opacity="0.6" stroke-linecap="round"/>
+  <path d="M362 506 Q364 510 367 511" fill="none" stroke="#B5795A" stroke-width="2" opacity="0.5" stroke-linecap="round"/>
+  <path d="M438 506 Q436 510 433 511" fill="none" stroke="#B5795A" stroke-width="2" opacity="0.5" stroke-linecap="round"/>
+
+  <!-- Small brooch on the drape -->
+  <circle cx="512" cy="612" r="9" fill="#F3E9EF" stroke="#7C5CBF" stroke-width="3"/>
+</svg>
