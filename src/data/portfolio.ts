@@ -282,7 +282,7 @@ export const timeline: TimelineEntry[] = [
 /* ---------- Certifications ---------- */
 
 export const certifications: Certification[] = [
-  { name: "Get Started with Generative AI and Agents in Azure", issuer: "Microsoft", year: "Sep 2026" },
+  { name: "Get Started with Generative AI and Agents in Azure", issuer: "Microsoft", year: "Sep 2026", image: "/images/certificates/microsoft-azure-ai.png" },
   { name: "Enterprise Security in Practice", issuer: "IBM", year: "Oct 2026", image: "/images/certificates/ibm-security.png" },
   { name: "Introduction to Modern AI", issuer: "Cisco", year: "Sep 2026", image: "/images/certificates/cisco-modern-ai.png" },
   { name: "Claude 101", issuer: "Anthropic", year: "Oct 2026", image: "/images/certificates/claude-101.png", url: "https://academy.claude.com/verify/6beef1dccee4e52644d46b6f6dee242e" },
