@@ -131,10 +131,10 @@ export const skillGroups: SkillGroup[] = [
     skills: ["PHP", "Laravel", "AJAX", "MySQL / SQL", "PostgreSQL", "Prisma", "Schema Design", "C#", "Python"],
   },
   {
-    title: "Accounting & Finance",
+    title: "Accounting, Finance & MIS",
     icon: "accounting",
-    description: "MAAT-qualified accounting skills",
-    skills: ["Financial Reporting", "Taxation", "Bookkeeping", "Business Process Management", "Payroll (EPF/ETF)", "MS Excel"],
+    description: "MAAT-qualified, with business systems know-how",
+    skills: ["Financial Reporting", "Taxation", "Bookkeeping", "Management Information Systems (MIS)", "Business Process Management", "Payroll (EPF/ETF)", "MS Excel"],
   },
   {
     title: "Tools & Other",
