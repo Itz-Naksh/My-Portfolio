@@ -21,7 +21,7 @@ export interface Stat {
   label: string;
 }
 
-export type SkillCategoryIcon = "frontend" | "backend" | "tools";
+export type SkillCategoryIcon = "frontend" | "backend" | "tools" | "accounting";
 
 export interface SkillGroup {
   title: string;
@@ -79,18 +79,18 @@ export interface Certification {
 export const personal = {
   name: "Fathima Naksha Banu",
   initials: "FN",
-  role: "Full-Stack Developer",
+  role: "Full-Stack Developer & Accounting Technician (MAAT)",
   // Rotating phrases for the typing animation under your name in the hero
-  typingRoles: ["Full-Stack Developer", "PHP & Laravel Developer", "Next.js & React Developer", "Tech + Business Problem Solver"],
+  typingRoles: ["Full-Stack Developer", "Accounting Technician (MAAT)", "PHP & Laravel Developer", "Tech + Finance Problem Solver"],
   location: "Ampara, Sri Lanka",
-  tagline: "Building reliable, database-driven web applications.",
+  tagline: "Combining technology and accounting to build smarter business solutions.",
   bio: [
-    "I'm a full-stack developer with a background that combines technology, business, and accounting. I build practical web applications, from PHP/Laravel and MySQL systems to modern Next.js apps, and I've gained real-world experience working with development teams through industry internships.",
-    "Alongside my HND in Information Technology at SLIATE, I'm a BBA undergraduate at the University of Peradeniya and a Member of AAT Sri Lanka (MAAT). This gives me a strong understanding of financial reporting, taxation, and business processes, which helps me build software that solves real business problems.",
-    "I enjoy turning real business problems into clean, reliable software and I keep learning new tools along the way. I'm a Student Member of the Computer Society of Sri Lanka (CSSL), and I'm always happy to connect with developers, mentors, and professionals in tech and finance.",
+    "I'm a full-stack developer and a Member of AAT Sri Lanka (MAAT), combining technology, accounting, and business. I build practical web applications, from PHP/Laravel and MySQL systems to modern Next.js apps, and I bring hands-on accounting experience from working as an Accounts Trainee.",
+    "Alongside my HND in Information Technology at SLIATE, I'm a BBA undergraduate at the University of Peradeniya. This gives me a strong understanding of financial reporting, taxation, and business processes, which helps me build software that solves real business problems.",
+    "I enjoy turning real business problems into clean, reliable software and I keep learning new tools along the way. I'm a Student Member of the Computer Society of Sri Lanka (CSSL), and I'm open to opportunities in software development, accounting, and finance technology.",
   ],
   seeking: "IT · Business · Accounting",
-  currently: "Building full-stack projects with Laravel and Next.js, and exploring AI tools",
+  currently: "Building full-stack projects and growing my accounting and finance expertise",
   email: "fathinaksh14@gmail.com",
   resumeUrl: "/resume.pdf",
   profileImage: "/images/hero-tech.jpg", // set to "" to show the drawn tech illustration instead
@@ -129,6 +129,12 @@ export const skillGroups: SkillGroup[] = [
     icon: "backend",
     description: "Server logic, schemas & queries",
     skills: ["PHP", "Laravel", "AJAX", "MySQL / SQL", "PostgreSQL", "Prisma", "Schema Design", "C#", "Python"],
+  },
+  {
+    title: "Accounting & Finance",
+    icon: "accounting",
+    description: "MAAT-qualified accounting skills",
+    skills: ["Financial Reporting", "Taxation", "Bookkeeping", "Business Process Management", "Payroll (EPF/ETF)", "MS Excel"],
   },
   {
     title: "Tools & Other",

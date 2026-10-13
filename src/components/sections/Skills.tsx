@@ -10,11 +10,11 @@ export default function Skills() {
       <SectionHeading
         id="skills"
         eyebrow="Skills"
-        title="Technologies I work with"
-        subtitle="A toolkit I keep growing, focused on building fast, accessible, and maintainable products."
+        title="Skills I bring"
+        subtitle="A mix of software development and accounting skills, so I understand both the code and the business behind it."
       />
 
-      <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-3">
+      <div className="grid gap-6 md:grid-cols-2">
         {skillGroups.map((group, i) => (
           <Reveal key={group.title} delay={i * 0.1} className="h-full">
             <SkillCard {...group} />

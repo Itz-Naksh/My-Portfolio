@@ -1,10 +1,11 @@
-import { Code, Server, Wrench, type LucideIcon } from "lucide-react";
+import { Calculator, Code, Server, Wrench, type LucideIcon } from "lucide-react";
 import type { SkillCategoryIcon, SkillGroup } from "@/data/portfolio";
 
 const categoryIcons: Record<SkillCategoryIcon, LucideIcon> = {
   frontend: Code,
   backend: Server,
   tools: Wrench,
+  accounting: Calculator,
 };
 
 /** One skill group: icon, title, description and a list of skill chips. */
