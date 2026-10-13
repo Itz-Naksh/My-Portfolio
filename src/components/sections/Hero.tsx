@@ -95,6 +95,8 @@ export default function Hero() {
           transition={{ duration: 0.8, ease: [0.22, 1, 0.36, 1], delay: 0.2 }}
           className="relative mx-auto w-56 sm:w-64 lg:w-72"
         >
+          {/* Soft glow behind the frame */}
+          <span aria-hidden="true" className="bg-gradient-brand absolute -inset-6 -z-10 rounded-[2.5rem] opacity-30 blur-2xl" />
           {/* Gradient ring */}
           <div className="bg-gradient-brand rounded-[2rem] p-1.5 shadow-lift">
             <div className="relative aspect-[4/5] overflow-hidden rounded-[1.65rem] bg-alt">
@@ -109,9 +111,6 @@ export default function Hero() {
               />
             </div>
           </div>
-          {/* Small decorative accents */}
-          <span aria-hidden="true" className="absolute -bottom-4 -left-4 -z-10 h-24 w-24 rounded-2xl bg-accent-light" />
-          <span aria-hidden="true" className="absolute -top-4 -right-4 -z-10 h-16 w-16 rounded-full bg-primary/15" />
         </motion.div>
         ) : (
           <motion.div
