@@ -10,7 +10,8 @@ export default function About() {
     <Section id="about" alt>
       <SectionHeading id="about" eyebrow="About me" title="A little about who I am" />
 
-      <div className="grid items-center gap-12 lg:grid-cols-[0.8fr_1.2fr]">
+      <div className={`grid items-center gap-12 ${personal.profileImage ? "lg:grid-cols-[0.8fr_1.2fr]" : "mx-auto max-w-3xl"}`}>
+        {personal.profileImage && (
         <Reveal className="mx-auto w-full max-w-xs lg:max-w-none">
           <div className="relative aspect-square overflow-hidden rounded-2xl border border-border bg-surface shadow-soft">
             <Image
@@ -22,6 +23,7 @@ export default function About() {
             />
           </div>
         </Reveal>
+        )}
 
         <Reveal delay={0.1}>
           <h3 className="text-2xl">

@@ -7,6 +7,7 @@ import { personal } from "@/data/portfolio";
 import { buttonStyles } from "@/lib/styles";
 import SocialLinks from "@/components/ui/SocialLinks";
 import TypingText from "@/components/ui/TypingText";
+import HeroIllustration from "@/components/ui/HeroIllustration";
 
 // Staggered entrance for hero content
 const container = {
@@ -44,7 +45,7 @@ export default function Hero() {
           </motion.p>
 
           <motion.p variants={item} className="text-lg font-medium text-heading">
-            Hi there, I&apos;m
+            Hey, I&apos;m
           </motion.p>
 
           <motion.h1
@@ -86,7 +87,8 @@ export default function Hero() {
           </motion.div>
         </motion.div>
 
-        {/* Photo column */}
+        {/* Right column: profile photo if set, otherwise the tech illustration */}
+        {personal.profileImage ? (
         <motion.div
           initial={{ scale: 0.96 }}
           animate={{ scale: 1 }}
@@ -111,6 +113,16 @@ export default function Hero() {
           <span aria-hidden="true" className="absolute -bottom-4 -left-4 -z-10 h-24 w-24 rounded-2xl bg-accent-light" />
           <span aria-hidden="true" className="absolute -top-4 -right-4 -z-10 h-16 w-16 rounded-full bg-primary/15" />
         </motion.div>
+        ) : (
+          <motion.div
+            initial={{ opacity: 0, scale: 0.96 }}
+            animate={{ opacity: 1, scale: 1 }}
+            transition={{ duration: 0.8, ease: [0.22, 1, 0.36, 1], delay: 0.2 }}
+            className="mx-auto w-full max-w-md"
+          >
+            <HeroIllustration />
+          </motion.div>
+        )}
       </div>
     </section>
   );

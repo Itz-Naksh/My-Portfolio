@@ -67,7 +67,7 @@ const personJsonLd = {
   jobTitle: personal.role,
   url: personal.siteUrl,
   email: `mailto:${personal.email}`,
-  image: `${personal.siteUrl}${personal.profileImage}`,
+  ...(personal.profileImage && { image: `${personal.siteUrl}${personal.profileImage}` }),
   address: { "@type": "PostalAddress", addressLocality: personal.location },
   ...(currentJob && { worksFor: { "@type": "Organization", name: currentJob.organization } }),
   sameAs: socials.filter((s) => s.platform !== "email").map((s) => s.href),
